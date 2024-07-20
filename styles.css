@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #001f8e;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-areas:
+        "logo logo logo logo"
+        "shop sell about about"
+        "bottom bottom bottom bottom";
+    gap: 20px;
+}
+
+.logo-area {
+    grid-area: logo;
+    text-align: center;
+}
+
+.logo-area img {
+    max-width: 100px;
+}
+
+.shop, .sell, .about {
+    padding: 10px;
+}
+
+.shop h2, .sell h2, .about h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.shop ul, .sell ul, .about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shop li, .sell li, .about li {
+    margin-bottom: 5px;
+}
+
+.shop li a, .sell li a, .about li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom {
+    grid-area: bottom;
+    text-align: center;
+    background-color: black;
+    color: wheat;
+    width: 110%;
+    margin-left: -20px;
+}
+
+.region, .links {
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-areas:
+            "logo"
+            "shop"
+            "sell"
+            "about"
+            "bottom";
+        text-align: center;
+    }
+
+    .shop, .sell, .about {
+        text-align: center;
+    }
+}
